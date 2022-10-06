@@ -1,0 +1,9 @@
+
+# Logging standard out and in to a file 
+#! /bin/bash
+set -xv
+script_log="/tmp/log_`date +%F`.log"
+exec 1>>$script_log
+exec 2>&1
+datee
+echo "This will be written into log file rather than terminal.."
